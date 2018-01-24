@@ -50,13 +50,33 @@ header {
 }
 
 /*======================================*/
-/*-----Silo-----------------------------*/
+/*-----Main-Content---------------------*/
 
 .silo {
     margin: auto;
     background-color: rgb(5,5,255);
-    height: 100vh;
+    height: auto;
 }
 
+.content {
+    margin:10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#profile-image {
+    width: 250px;
+    height: 200px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 2em;
+    margin: 10px;
+    clear: left;
+}
 /*======================================*/
 /*-----Silo-----------------------------*/
