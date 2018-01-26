@@ -5,7 +5,9 @@
 }
 
 body {
-    background: url(../images/water.gif) fixed center center;
+    /* background: url(../images/snow.jpeg) fixed center center no-repeat;
+    background-size: cover; */
+    background-color: rgb(0,53,64);
 }
 
 .silo-width {
@@ -21,7 +23,7 @@ header {
 }
 
 .header-splash {
-    background-color: rgba(194, 237, 243, .6);
+    background-color: rgb(50,161,152);
     height: 100%;
     margin: auto;
     width: 100%;
@@ -34,19 +36,25 @@ header {
 .header-splash h1 {
     margin-right: auto;
     margin-left: 10px;
-    font-size: 2em;
+    margin-bottom: 4px;
+    font-size: 2.9em;
 }
 
-.header-splash a {
+a {
     text-decoration: none;
     font-size: 1.8em;
     color: rgb(189, 193, 201);
-    margin-right: 10px;
-    letter-spacing: -2px;
+    margin-right: 25px;
+    margin-bottom: 2px;
+    letter-spacing: -1px;
 }
 
-.header-splash a:hover {
-    color: purple;
+a:link, a:visited, a:active {
+    color: rgb(0,53,64);
+}
+
+a:hover {
+    color: rgb(238,232,214);
 }
 
 /*======================================*/
@@ -54,13 +62,15 @@ header {
 
 .silo {
     margin: auto;
-    background-color: rgb(5,5,255);
-    height: auto;
+    background-color: rgb(238,232,214);
+    height: 83vh;
 }
 
 .content {
-    margin:10px;
-    width: 100%;
+    margin-left: 15px;
+    margin-right: 10px;
+    padding-top: 20px;
+    width: 60%;
     height: 100%;
     position: relative;
 }
@@ -68,15 +78,23 @@ header {
 #profile-image {
     width: 250px;
     height: 200px;
-    float: right;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 13px;
+    margin-top: 10px;
+    float: left;
 }
 
 .content p {
     font-size: 2em;
     margin: 10px;
-    clear: left;
 }
+
+
+
 /*======================================*/
-/*-----Silo-----------------------------*/
+/*-----Footer---------------------------*/
+
+footer {
+    margin: auto;
+    height: 7vh;
+    background-color: rgb(50,161,152);
+}
