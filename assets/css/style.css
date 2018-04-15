@@ -40,7 +40,7 @@ header {
     font-size: 2.9em;
 }
 
-a {
+.header-splash a {
     text-decoration: none;
     font-size: 1.8em;
     color: rgb(189, 193, 201);
@@ -113,6 +113,7 @@ a:hover {
     width: 31%;
     height: 100px;
     border: 1px black solid;
+    margin-right: 10px;
 }
 
 #github {
@@ -131,6 +132,50 @@ a:hover {
     background: url(../images/stack-overflow.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+/*======================================*/
+/*-----Projects-------------------------*/
+
+.content-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-heading h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.project-list {
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.list-item .item-title {
+    align-self: center;
+    width: 140px;
+    min-width: 140px;
+}
+
+.item-title a {
+    font-size: 22px;
+}
+
+.item-title a:hover {
+    color: white;
+}
+
+.list-item p {
+    font-size: 18px;
+    margin-left: 10px;
 }
 
 /*======================================*/
