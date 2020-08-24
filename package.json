@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "developer portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4cody/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4cody/portfolio/issues"
+  },
+  "homepage": "https://github.com/4cody/portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
