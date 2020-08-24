@@ -4,6 +4,7 @@
   "description": "developer portfolio",
   "main": "server.js",
   "scripts": {
+    "server": "nodemon server",
     "start": "node server.js"
   },
   "repository": {
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/4cody/portfolio#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
