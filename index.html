@@ -1,6 +1,16 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I am a software engineer specializing in web development.  Contact me, and let's work together."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -8,16 +18,29 @@
       content="Cody Shaner | Software engineer specializing in web development"
     />
     <title>Cody | Portfolio</title>
-    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body id="page-wrapper">
-    <nav class="sticky-nav" id="sticky-nav" style="opacity: 1"></nav>
-    <header class="container">
-      <div class="header-copy">
-        <h1>Hello, I'm Cody</h1>
+
+  <body>
+    <nav class="sticky-nav" id="sticky-nav" style="opacity: 1">
+      <a href="/"><img src="/img/logo.png" alt="Logo" class="nav__logo" /></a>
+      <a
+        href="javascript:void(0)"
+        class="button nav__button"
+        onclick="smoothScroll('#contact', 1000)"
+        >Contact Me</a
+      >
+    </nav>
+
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="/img/logo.png" alt="Logo" class="header__logo" />
+      </div>
+      <div class="header__text-box">
+        <h1 class="heading-primary u-margin-bottom-xs">Hello, I'm Cody</h1>
         <p>
           A seasoned software engineer with a strong focus on web development,
-          boasting over four years of hands-on experience. Throughout my
+          having over four years of hands-on experience. Throughout my
           professional journey, I have dedicated extensive hours to acquiring
           and refining my expertise in programming, problem-solving, and
           crafting robust software solutions and web applications.
@@ -31,92 +54,736 @@
           ever-changing landscape of the industry.
         </p>
         <p>
-          One of my cherished hobbies revolves around capturing moments through
-          photography and videography, utilizing both traditional cameras and
-          drones for stunning aerial footage. I take great pleasure in
-          incorporating these captivating visuals into the web projects I
-          create, enhancing the overall user experience with visually appealing
+          Hiking and capturing breathtaking landscape videos with my drone is
+          one of my favorite hobbies. I derive a fair amount of joy from
+          integrating these stunning visuals into the web projects I develop,
+          elevating the user experience by incorporating visually captivating
           media content.
         </p>
       </div>
     </header>
-    <main class="container">
-      <section class="section-tasks">
-        <div class="section-heading">
-          <h2>What I do</h2>
-        </div>
-        <div class="tasks">
-          <div class="task">
-            <div class="task-icon">
-              <span></span>
+
+    <main>
+      <section class="section-tasks" id="tasks">
+        <div class="u-text-center">
+          <h2 class="heading-secondary u-margin-bottom-md">What I do</h2>
+          <div class="tasks">
+            <div class="task">
+              <div class="task__icon">
+                <span></span>
+              </div>
+              <p class="task__text">
+                <strong>Front-end Development: </strong>I develop responsive,
+                front-end UIs. I will write in vanilla CSS, but I typically use
+                CSS frameworks like bootstrap, material UI, and tailwindCSS. And
+                as for JavaScript, I am an expert in React, and I use it all the
+                time to power rich front-end applications.
+              </p>
             </div>
-            <p class="task-text">
-              <strong>Front-end Development: </strong>I develop responsive,
-              front-end UIs. I will write in vanilla CSS, but I typically use
-              CSS frameworks like bootstrap, material UI, and tailwindCSS. And
-              as for JavaScript, I am an expert in React, and I use it all the
-              time to power rich front-end applications.
-            </p>
-          </div>
-          <div class="task">
-            <div class="task-icon">
-              <span></span>
+
+            <div class="task">
+              <div class="task__icon">
+                <span></span>
+              </div>
+              <p class="task__text">
+                <strong>Back-end Development: </strong>
+                For server applications, most of the time, I use Node.js. I have
+                also used Python for many projects.
+              </p>
             </div>
-            <p class="task-text">
-              <strong>Back-end Development: </strong>
-              For server applications, most of the time, I use Node.js. I have
-              also used Python for many projects.
-            </p>
-          </div>
-          <div class="task">
-            <div class="task-icon">
-              <span></span>
+
+            <div class="task">
+              <div class="task__icon">
+                <span></span>
+              </div>
+              <p class="task__text">
+                <strong>Full-Stack Development: </strong>
+                I am capable of building full-stack websites and applications,
+                ready to use with a functional front and back-end. I can deploy
+                and maintain these web applications.
+              </p>
             </div>
-            <p class="task-text">
-              <strong>Full-Stack Development: </strong>
-              I can capable of building full-stack websites and applications,
-              ready to use with functional front and back-end. I can deploy and
-              maintain these complex web these applications.
-            </p>
-          </div>
-          <div class="task">
-            <div class="task-icon">
-              <span></span>
+
+            <div class="task">
+              <div class="task__icon">
+                <span></span>
+              </div>
+              <p class="task__text">
+                <strong>Teaching/Mentoring: </strong>
+                I deliver 'coding bootcamp' courses on the full-stack
+                technoloiges typically found in the MERN stack. For these
+                courses we touch on many peripheral concepts and tools that
+                assist in developer workflow and application deployment.
+              </p>
             </div>
-            <p class="task-text">
-              <strong>Teaching/Mentoring: </strong>
-              I deliver 'coding bootcamp' courses on the full-stack technoloiges
-              typically found in the MERN stack. For these courses we touch on
-              many peripheral concepts and tools that assist in developer
-              workflow and application deployment.
-            </p>
           </div>
         </div>
       </section>
+
       <section class="section-skills">
-        <div class="section-heading">
-          <h2>My Skills</h2>
-          <p>Click on a skill for more information:</p>
+        <div class="u-text-center section-heading">
+          <h2 class="heading-secondary">My Skills</h2>
+          <p>Click on each skill to get more information.</p>
         </div>
-        <div class="skills"></div>
+        <div class="">
+          <div class="u-text-center skills">
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="It's one of the first programming languages I've learned, and I have a lot of experience working with it. I have built many web applications using JavaScript. After using it for years, I now understand much of the weird parts and quirks of it to better write fast and reliable software applications."
+              >JavaScript</a
+            >
+            <!-- <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="The reason I got to C/C++ was because of their performance and power. You really can build anything using them, operating systems, desktop applications, and so much more. Sky's truly the limit!<br>Since I care a lot about performance, I use this programming language whenever performance is critical. I also love how close they are to hardware and how heavily they are used in so many open-source projects such as Node.js, V8, Google Chrome, Linux."
+              >C++</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="This is a real superset for JavaScript; code completion, static typing, interfaces, and more are all the features that help work with JavaScript a lot easier in teams and big projects. <br> I especially love it when I am working in teams, and the projects are using TypeScript, which makes finding bugs and code readability a lot easier and better. "
+              >TypeScript</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="I mostly use Python for automation, checking the security of my servers and websites, and sometimes for data science and machine learning applications with the help of the great packages it has."
+              >Python</a
+            > -->
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="When I first got to CSS years ago, I was constantly looking for different frameworks and libraries to use with it. But now I'm working on my own to have for full control over everything in my projects without going through many headaches."
+              >CSS3</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="Of course it's a pain to write pure CSS all in one file! That's why I use SASS and LESS to organize CSS and have preprocessing tools running on top of it."
+              >SASS/LESS</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="React is a super effective tool for building complex UIs and I use it more than I write vanilla html/js. This is my favorite JavaScript library, and I use it especially for large and complex web front-ends to be able to manage, scale and handle things in a more controlled and better way."
+              >React.js</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="Node.js is my primary technology for building servers and network applications. I have spent years practicing and working with Nodejs, from security, performance, and efficiency to scalability, microservices, and a lot more. <br> I love it because of its asynchrony and event-driven nature and the ability to write C++ code with it is something I'm learning to do!"
+              >Node.js</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="SQL is an amazing tool for working with large amounts of data or writing complex queries. For database management, my go-to solution is Postgress."
+              >SQL</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="When I want to quickly build a web application that doesn't have complex data and documents that are not really related to each other so much, I go with MongoDB."
+              >MongoDB</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="I value good tests; it makes the development of the project way easier and more effective, especially for teams and if the project is a very complex one. It tells you whether a new feature some developer added has broken any parts of the app or not, which is extremely helpful.<br>I make use of all various kinds of testings, such as unit testing, integration testing, and functional testing."
+              >Testing</a
+            >
+            <!-- <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="I thoroughly detest doing a tedious task over and over again! That's why I make use of automation as much as possible, which I do mostly by using automation services and software or building my own using Python."
+              >Automation</a
+            > -->
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="Nothing much to say here... I just love that when we do a code change, tests will automatically run, and if all go ok and the changes get approved, they will get deployed and go to production with a single click, all automatically. All we have to do is to set up CI/CD pipelines at the beginning and write good tests."
+              >CI/CD</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="Docker helps me push software onto servers without going through much effort; and also to make sure that all the team members are using a consistent environment and can get to the real work ASAP on new projects."
+              >Docker</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="I can't say how crucial UX is for me. I always learn more and more about user experience and how I can build something that users can use easily without getting lost and confused. The feel and design of a product are absolutely one of the most important aspects for me and not just the aesthetics, but all parts of it, the way it's deployed, the way it works and functions, and even the things that users can't see behind the scene, the source code.<br>Great UX won't just make the users happy. Rather, it makes all the members of the project and people associated with it pleased and satisfied, be it the end-users, developers, designers, managers, or even marketers. "
+              >UX</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="I can't say that I am an SEO expert, it is really not in the area of my expertise, but I know enough of it when developing websites. I do know how to build a web application that is SEO friendly.<br>I can't take a website and make it be the first result by a common keyword all by myself. To do that, I would need the help of another SEO expert for sure."
+              >SEO</a
+            >
+            <!-- <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="Security is one of the most important factors of an application, especially servers. I've gone through many Hacking courses to be able to protect my applications from hackers and increase their security.<br>Each year I investigate OWASP to find new threats and how to protect an application from them."
+              >Security</a
+            > -->
+            <!-- <a
+              href="javascript:void(0)"
+              class="skill"
+              data-title="Web Performance Optimization"
+              data-desc="The performance of an application is of utmost importance to me. I consider as many factors as I can to help improve the speed of an app, such as writing highly efficient code and algorithms, using the correct data structure, image optimization, code splitting, and many more."
+              >WPO</a
+            > -->
+            <!-- <a
+              href="javascript:void(0)"
+              class="skill"
+              data-title="Amazon Web Services"
+              data-desc="Amazon web services are huge, I know how to work with it to deploy and maintain servers and websites, and I am also familiar with all the services they provide and how to use them to solve business problems. I am almost there to become a professional AWS Certified DevOps Engineer, and I am still actively improving my knowledge and skills of it."
+              >AWS</a
+            > -->
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="I am familiar with many Linux commands and use them every day. I also have a decent knowledge of operating systems in general. "
+              >Linux</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="Comparing changes, reverting to previous versions, branching and merging, and writing good commits are all things I use daily with Git."
+              >Git</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="skill"
+              data-desc="For complex UIs, I first design them in apps like Figma or Photoshop before implementing them with code (of course, after designing and planning with the good old pen and paper!).<br>Sometimes I edit photos and create my own graphic icons and pictures myself, it's not in the area of my expertise, but it surely comes to use from time to time."
+              >Web Design</a
+            >
+          </div>
+        </div>
+        <div class="row u-text-center a-2">
+          I care a lot about high quality and readable code, and I always keep
+          performance, scalability, security, and writing tests in my mind
+          whenever I am programming.<br />
+          I assume that millions of users would use the software I am building,
+          and hundreds of people would contribute to its source code. code.
+        </div>
       </section>
+
       <section class="section-projects">
-        <div class="section-heading">
-          <h2>Projects</h2>
-          <p>Click on a project for more information:</p>
+        <div class="row u-text-center section-heading">
+          <h2 class="heading-secondary">Some Projects I've Done</h2>
+          <p>
+            Click on each project to see the link for it and get more
+            information.
+          </p>
+        </div>
+
+        <div class="projects">
+          <div class="row">
+            <div class="col-md-1-of-2 col-lg-1-of-2">
+              <a
+                href="javascript:void(0)"
+                data-title="Pagser"
+                data-technologies="Node.js-MongoDB-React-C++-MYSQL-SASS-AWS"
+                data-plink="https://www.pagser.com"
+                data-slink="https://github.com/agile8118/pagser"
+                data-img="/img/pagser-big.png"
+                data-text="<p>This is one of the most complex web applications I've ever done, and I can talk about it for hours. It has full authentication, file uploading, image processing, comment systems, full user profile, and much more.
+                </p>
+                <p>You need to create an account to explore the features it offers. I've built the entire front-end and back-end from scratch myself. The whole UI is powered by React, and I coded all the styles from scratch with pure CSS with the help of SASS.
+                </p>
+                <p>The back-end is designed with Node.js, MongoDB, MYSQL, and C++. I use C++ for image processing, some heavy calculations, and multi-threading.
+                </p><p>This app is still in the development stage, and you may not feel so comfortable working with it right now. I still need to fix a couple of bugs, add more features, deploy it on powerful servers and work on its SEO.
+                </p>"
+                class="project"
+              >
+                <img src="/img/pagser.png" alt="" />
+              </a>
+            </div>
+
+            <div class="col-md-1-of-2 col-lg-1-of-2">
+              <a
+                href="javascript:void(0)"
+                data-title="URL Shortener"
+                data-technologies="Node.js-React-MYSQL-SASS-AWS"
+                data-plink="https://www.weer.guru/"
+                data-slink="https://github.com/agile8118/url-shortener"
+                data-img="/img/url-shortener-big.png"
+                data-text="<p>This app takes any URL you give to it and gives you a short URL that refers to that. You need to create an account to be able to manage your shortened URLs and get permanent shortened URLs, and it uses Google Oath for authentication.
+                </p>
+                <p>URLs that have been created anonymously and haven't got views for 1 month will be automatically removed from the database.
+                </p>"
+                class="project"
+              >
+                <img src="/img/url-shortener.png" alt="" />
+              </a>
+            </div>
+
+            <div class="col-md-1-of-2 col-lg-1-of-2">
+              <a
+                href="javascript:void(0)"
+                data-title="Stopwatch"
+                data-technologies="CSS-JavaScript-HTML"
+                data-plink="https://agile8118.github.io/stopwatch/index.html"
+                data-slink="https://github.com/agile8118/stopwatch"
+                data-img="/img/stopwatch-big.png"
+                data-text="<p>I've done this very simple project with just HTML, CSS, and JavaScript in a day for fun, which is a stopwatch app with a UI like iOS. I also published a video on YouTube teaching some front-end development while building this, and you could check it out on my channel.</p>"
+                class="project"
+              >
+                <img src="/img/stopwatch.png" alt="" />
+              </a>
+            </div>
+
+            <div class="col-md-1-of-2 col-lg-1-of-2">
+              <a
+                href="javascript:void(0)"
+                data-title="Solid Background Color Download"
+                data-technologies="CSS-JavaScript-HTML"
+                data-plink="https://agile8118.github.io/solid-color-backgrounds-download/"
+                data-slink="https://github.com/agile8118/solid-color-backgrounds-download"
+                data-img="/img/solid-background-download-big.png"
+                data-text="<p>This app will generate PNG images with the dimensions and a color you specify, and it's done with the help of HTML 5 canvas.</p><p> Note that this doesn't work quite well on mobile browsers. You can check out the source code to understand how the app functions.</p>"
+                class="project"
+              >
+                <img src="/img/solid-background-download.png" alt="" />
+              </a>
+            </div>
+
+            <div class="col-md-1-of-2-full col-lg-1-of-2-full">
+              <a
+                href="javascript:void(0)"
+                data-title="Rolling Records"
+                data-technologies="Node.js-MongoDB-SASS-jQuery-Bootstrap"
+                data-plink="https://www.rollingrecords.fi/"
+                data-img="/img/rr-big.png"
+                data-text="<p>I got to work on this project with a good friend of mine, 
+                <a class='link' href='https://www.linkedin.com/in/roman-tuomisto-a3780549' target='_blank' rel='noopener'>Roman</a>. And because it was one of the first projects I worked on, I learned a lot going with it and had to solve real-world problems for the first time.</p><p>Since it started years ago, it still uses jQuery and Ejs, but we have plans to migrate its front-end to React, add Typescript support, and eventually write tests for various parts.</p>"
+                class="project"
+              >
+                <img src="/img/rr.png" alt="" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section-contact">
-        <div class="section-heading">
-          <h2>Contact Me</h2>
-          <p>
-            I'm open to learning about opportunites for employment or contract
-            work and making new connections!
+
+      <section class="section-contact" id="contact">
+        <div class="row u-text-center section-heading">
+          <h2 class="heading-secondary">Contact Me</h2>
+          <p class="u-margin-bottom-sm">
+            I am open to new remote opportunites, connections, contributing to
+            projects, collaborating, teaching, helping, and more!
           </p>
+        </div>
+        <div class="container">
+          <!-- <form class="form" id="contact-form">
+            <div class="form__group">
+              <input
+                type="text"
+                id="name"
+                placeholder="Full name"
+                name="name"
+                class="form__input"
+                autocomplete="off"
+                required=""
+              />
+              <label class="form__label" for="name">Full name</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                name="email"
+                class="form__input"
+                autocomplete="off"
+                required=""
+              />
+              <label class="form__label" for="email">Email address</label>
+            </div>
+            <div class="form__group">
+              <textarea
+                maxlength="3000"
+                class="form__input"
+                name="message"
+                placeholder="Your message"
+                id="message"
+                cols="30"
+                rows="8"
+                required=""
+              ></textarea>
+              <label class="form__label" for="message">Your message</label>
+            </div>
+            <button class="button" type="submit">Send →</button>
+          </form>
+          <div
+            class="contact-message contact-message--success u-display-none"
+            id="contact-message-success"
+          >
+            <strong>Your message was successfully delivered.</strong>
+            <p class="u-margin-bottom-sm">
+              I'll respond to your message as soon as possible to your email.
+              <br />Also, make sure to check your spam folder for my email.
+              Thanks for contacting me.
+            </p>
+            <button class="button u-margin-bottom-xs" id="contact-send-again">
+              Send another
+            </button>
+          </div>
+          <div
+            class="contact-message contact-message--error u-display-none"
+            id="contact-message-error"
+          >
+            <strong>Sorry something unexpected happened!</strong>
+            <p class="u-margin-bottom-sm">
+              Please try again, and if the issue is still there, you can reach
+              me directly through email.
+            </p>
+            <a
+              class="button u-margin-bottom-xs"
+              href="#contact"
+              onclick="location.reload()"
+              >Try again</a
+            >
+          </div> -->
+          <br />
+          <h3 class="heading-tertiary u-margin-top-sm">
+            If you prefer to contact me directly through email:
+          </h3>
+          <strong class="text">cody@alltodev.com</strong>
+          <!-- <h3 class="heading-tertiary u-margin-top-sm">My LinkedIn account:</h3>
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/joseph-heidari"
+            target="_blank"
+            rel="noopener"
+            >linkedin.com/in/joseph-heidari</a
+          >
+
+          <h3 class="heading-tertiary u-margin-top-sm">My YouTube channel:</h3>
+          <a
+            class="link"
+            href="https://www.youtube.com/@Cododev"
+            target="_blank"
+            rel="noopener"
+            >youtube.com/@Cododev</a
+          >
+-->
+          <h3 class="heading-tertiary u-margin-top-sm">
+            Set up a call with me:
+          </h3>
+          <p class="text">
+            If you want to contact me through video or voice chat, contact me
+            through email first so we can schedule a call.
+          </p>
+
+          <a href="javascript:void(0)" class="info">
+            <h3 class="heading-tertiary">How do I offer remote services?</h3>
+            <img src="/img/down-arrow.svg" alt="" />
+            <div class="info__description">
+              If you need to launch any kind of web application from scratch,
+              you can most definitely count on me.
+              <br />
+
+              Or if you need to deploy something into production, improve,
+              modify or add a new feature to your current application, I could
+              help you there as well.
+              <br />
+              If you have the technical skills, you probably know how it goes.
+              We might contribute to the source code on platforms like GitHub.
+              <br />
+              If you don't have any technical skills whatsoever, we could start
+              off by talking about your idea and first designing a user
+              interface schema or the product's final look (using an application
+              like Photoshop or Adobe XD). Once you're happy with everything,
+              the development phase will start.
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="info">
+            <h3 class="heading-tertiary">
+              How I can teach you web development and programming?
+            </h3>
+            <img src="/img/down-arrow.svg" alt="" />
+            <div class="info__description">
+              If you are getting started with something new and struggling to
+              get your head around stuff and have lots of questions, I offer
+              virtual sessions. I will teach you how to improve your current
+              skill or help you get started with a technology, or just do
+              something together.
+              <br />
+              Maybe you want to start with React and know how to use it in
+              production, or maybe you want to deploy your app and don't know
+              what to do... well, just drop me an email, and let's do it
+              together!
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="info">
+            <h3 class="heading-tertiary">
+              How I can help you with your current project?
+            </h3>
+            <img src="/img/down-arrow.svg" alt="" />
+            <div class="info__description">
+              If you are designing, building, or launching something, be it a
+              Node.js app, a website, or whatever, and you need help, or you
+              don't have time to do that yourself, I am here for you!
+            </div>
+          </a>
         </div>
       </section>
     </main>
-    <footer class=""></footer>
-    <script src="/src/main.js"></script>
+
+    <footer class="footer">
+      <p class="footer__text">ALL TO DEV | Cody</p>
+      <a class="footer__link" href="mailto:cshaner04@gmail.com"
+        ><img src="/img/google.svg" alt=""
+      /></a>
+      <a
+        class="footer__link"
+        href="https://github.com/4cody"
+        target="_blank"
+        rel="noopener"
+        ><img src="/img/github.svg" alt=""
+      /></a>
+      <a
+        class="footer__link"
+        href="https://stackoverflow.com/users/8403921/4cody"
+        target="_blank"
+        rel="noopener"
+        ><img src="/img/stack.svg" alt=""
+      /></a>
+    </footer>
+
+    <div class="mdl u-display-none" id="modal-skills">
+      <div class="mdl__content">
+        <div class="mdl__header">
+          <h3 class="heading-tertiary"></h3>
+          <a
+            href="javascript:void(0)"
+            data-target="modal-skills"
+            class="mdl__close"
+            >×</a
+          >
+        </div>
+        <div class="mdl__body"></div>
+      </div>
+    </div>
+
+    <div class="mdl mdl--big u-display-none" id="modal-projects">
+      <div class="mdl__content">
+        <div class="mdl__header">
+          <h3 class="heading-tertiary"></h3>
+          <a
+            href="javascript:void(0)"
+            data-target="modal-projects"
+            class="mdl__close"
+            >×</a
+          >
+        </div>
+        <div class="mdl__body">
+          <img
+            src="/img/pagser.png"
+            class="u-margin-top-xs"
+            alt=""
+            id="modal-projects-img"
+          />
+          <div class="mdl__text u-margin-top-sm"></div>
+          <h4 class="u-margin-top-xs">Technologies Used:</h4>
+          <div class="technologies"></div>
+          <div class="u-margin-top-sm">
+            <a href="" class="link-complete" target="_blank" rel="noopener"
+              >Go to Project →</a
+            >
+            <a href="" class="link-complete" target="_blank" rel="noopener"
+              >Go to Source Code →</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading u-display-none" id="loading">
+      <div class="loading-content">
+        <div class="lds-css ng-scope">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <span>SENDING</span>
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      // var a = document.querySelector("#contact-form");
+      // var s = document.querySelector("#contact-message-success");
+      // var r = document.querySelector("#contact-message-error");
+      // var e = document.querySelector("#contact-send-again");
+      // a.addEventListener("submit", function (e) {
+      //   document.querySelector("#loading").classList.remove("u-display-none");
+      //   e.preventDefault();
+      //   var t = document.querySelector("#name").value;
+      //   var o = document.querySelector("#email").value;
+      //   var n = document.querySelector("#message").value;
+      //   var c = new XMLHttpRequest();
+      //   c.onreadystatechange = function () {
+      //     if (c.readyState == XMLHttpRequest.DONE) {
+      //       if (c.status === 200) {
+      //         try {
+      //           a.classList.add("u-display-none");
+      //           r.classList.add("u-display-none");
+      //           s.classList.remove("u-display-none");
+      //           document
+      //             .querySelector("#loading")
+      //             .classList.add("u-display-none");
+      //         } catch (e) {}
+      //       } else {
+      //         a.classList.add("u-display-none");
+      //         r.classList.remove("u-display-none");
+      //         s.classList.add("u-display-none");
+      //         document
+      //           .querySelector("#loading")
+      //           .classList.add("u-display-none");
+      //       }
+      //     }
+      //   };
+      //   c.open("POST", "/contact", true);
+      //   c.setRequestHeader("Content-Type", "application/json");
+      //   c.send(JSON.stringify({ name: t, email: o, message: n }));
+      // });
+      // e.addEventListener("click", function () {
+      //   a.classList.remove("u-display-none");
+      //   r.classList.add("u-display-none");
+      //   s.classList.add("u-display-none");
+      //   document.querySelector("#message").value = "";
+      //   document.querySelector("#message").focus();
+      // });
+      function smoothScroll(e, n) {
+        var e = document.querySelector(e);
+        var c = e.getBoundingClientRect().top;
+        var a = window.pageYOffset;
+        var s = null;
+        function animation(e) {
+          if (s === null) s = e;
+          var t = e - s;
+          var o = ease(t, a, c, n);
+          window.scrollTo(0, o);
+          if (t < n) requestAnimationFrame(animation);
+        }
+        function ease(e, t, o, n) {
+          e /= n / 2;
+          if (e < 1) return (o / 2) * e * e * e * e + t;
+          e -= 2;
+          return (-o / 2) * (e * e * e * e - 2) + t;
+        }
+        requestAnimationFrame(animation);
+      }
+      window.onscroll = function () {
+        var e = window.pageYOffset | document.body.scrollTop;
+        if (e > document.querySelector("#tasks").offsetTop + 120) {
+          document
+            .querySelector("#sticky-nav")
+            .classList.remove("u-display-none");
+          setTimeout(function () {
+            document.querySelector("#sticky-nav").style.opacity = 1;
+          }, 200);
+        } else {
+          document.querySelector("#sticky-nav").style.opacity = 0;
+          setTimeout(function () {
+            document
+              .querySelector("#sticky-nav")
+              .classList.add("u-display-none");
+          }, 200);
+        }
+      };
+      document.addEventListener("click", function (e) {
+        if (
+          document.activeElement.toString() == "[object HTMLButtonElement]" ||
+          document.activeElement.toString() == "javascript:void(0)"
+        ) {
+          document.activeElement.blur();
+        }
+      });
+      document.querySelectorAll(".info").forEach(function (e) {
+        e.addEventListener("click", function () {
+          this.classList.toggle("open");
+          document.querySelectorAll(".info img").forEach(function (e) {
+            if (e.parentElement.classList.contains("open")) {
+              e.src = "/img/up-arrow.svg";
+            } else {
+              e.src = "/img/down-arrow.svg";
+            }
+          });
+        });
+      });
+      document.querySelectorAll(".skill").forEach(function (e) {
+        e.addEventListener("click", function (e) {
+          var t = document.querySelector("#modal-skills");
+          document.querySelector("#modal-skills h3").innerHTML =
+            this.getAttribute("data-title") || e.target.text;
+          document.querySelector("#modal-skills .mdl__body").innerHTML =
+            this.getAttribute("data-desc");
+          t.classList.remove("u-display-none");
+        });
+      });
+      document.querySelectorAll(".project").forEach(function (e) {
+        e.addEventListener("click", function (e) {
+          var t = document.querySelector("#modal-projects");
+          var o = this.getAttribute("data-plink");
+          var n = this.getAttribute("data-slink");
+          var c = this.getAttribute("data-img");
+          var a = this.getAttribute("data-title");
+          var s = this.getAttribute("data-text");
+          var r = this.getAttribute("data-technologies").split("-");
+          document.querySelector("#modal-projects h3").innerHTML = a;
+          document.querySelectorAll("#modal-projects .link-complete")[0].href =
+            o;
+          if (n) {
+            document.querySelectorAll(
+              "#modal-projects .link-complete"
+            )[1].href = n;
+            document
+              .querySelectorAll("#modal-projects .link-complete")[1]
+              .classList.remove("u-display-none");
+          } else {
+            document
+              .querySelectorAll("#modal-projects .link-complete")[1]
+              .classList.add("u-display-none");
+          }
+          document.querySelector("#modal-projects-img").src = c;
+          document.querySelector("#modal-projects .mdl__text").innerHTML = s;
+          document.querySelector("#modal-projects .technologies").innerHTML =
+            "";
+          r.forEach(function (e) {
+            var t = document.createElement("div");
+            t.setAttribute("class", "skill-sm");
+            t.textContent = e;
+            document.querySelector("#modal-projects .technologies").append(t);
+          });
+          t.classList.remove("u-display-none");
+        });
+      });
+      document.querySelectorAll(".mdl__close").forEach(function (e) {
+        e.addEventListener("click", function (e) {
+          var t = e.target.getAttribute("data-target");
+          document.querySelector("#" + t).classList.add("u-display-none");
+        });
+      });
+    </script>
   </body>
 </html>
